@@ -1,0 +1,33 @@
+@import url('http://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('http://fonts.cdnfonts.com/css/neue-haas-grotesk-text-pro');
+@import url('http://fonts.cdnfonts.com/css/claris-sans');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #353c51;
+    font-family: 'Gilroy-Regular', sans-serif;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2.5rem;
+    color: #f5f9fd;
+    text-align: center;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh
+}
+
+.content-wrapper {
+    padding-bottom: 2.5rem;
+}

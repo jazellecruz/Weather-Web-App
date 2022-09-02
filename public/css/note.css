@@ -1,0 +1,54 @@
+
+.main-container {
+    color: #fff;
+    width: 40%;
+    margin: 5rem auto;
+    text-align: justify;
+}
+
+.text-emphasize {
+    color: #74d9ff;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-bottom: 2.5rem;
+}
+
+p {
+    font-size: 1.4rem;
+    margin: 2.3rem 0;
+    line-height: 1.6;
+}
+
+.developer-name {
+    margin-top: 3rem;
+}
+
+a{
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+a:hover {
+    color: #FF9E00;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .body {
+        padding: 0 1.5rem;
+    }
+
+    .main-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1366px) {
+
+    .main-container {
+        width: 60%;
+    }
+
+}

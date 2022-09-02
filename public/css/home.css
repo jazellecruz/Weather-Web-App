@@ -1,0 +1,57 @@
+
+.main-container {
+    width: 30%;
+    background-color: #1c1c27;
+    border-radius: 20px;
+    margin: 5rem auto;
+    text-align: center;
+    padding: 3rem 0 3rem 0;
+    color: #fff;
+}
+
+h1 {
+    letter-spacing: 1px;
+}
+
+input {
+    width: 15rem;
+    height: 3rem;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.brand-container {
+    padding: 0 5rem;
+    margin-bottom: 2.5rem;
+    line-height: 3rem;
+}
+
+button {
+    margin-top: 30px;
+    width: 7rem;
+    height: 3rem;
+    background-color: #86a5ff;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .main-container {
+        width: 80%
+    }
+}
+
+@media only screen and (max-width: 1300px) and (min-width: 800px) {
+    .main-container {
+        width: 60%
+    }
+}
+
+@media only screen and (max-width: 1680px) and (min-width: 1300px) {
+    .main-container {
+        width: 40%;
+    }
+}

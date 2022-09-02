@@ -1,0 +1,15 @@
+.env
+node_modules
+npm-debug.log
+Thumbs.db
+.node_repl_history
+Procfile
+.vs
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix

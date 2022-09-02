@@ -1,0 +1,150 @@
+
+.main-container {
+    width: 90%;
+    height: 90%;
+    background-color: #1c1c27;
+    border-radius: 20px;
+    color: #000;
+    margin: 2rem auto;
+    padding-bottom: 2.5rem;
+}
+
+.weather-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.art-info-container {
+    position: relative;
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 11px );
+    -webkit-backdrop-filter: blur( 11px );
+    border-radius: 10px;
+    font-size: 120%;
+    display: inline-block;
+    bottom: 5rem;
+    left: 1rem;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: #f5f9fd;
+}
+
+.art-name {
+    font-weight: 800;
+}
+.art-name a {
+    color: inherit;
+}
+
+.artist-name {
+    font-size: 1rem;
+}
+
+.artist-name a{
+    color: #c4ddff;
+    font-style: italic;
+} 
+
+a:hover {
+    color: #FF9E00;
+}
+
+.text-container {
+    color: #fff;
+}
+
+.date-city-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.date-city-container > div {
+    background-color: #28293d;
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.location-icon {
+    color: #1572a1;
+    font-size: 1.5rem;
+    margin-right: 3px;
+}
+
+.temp{
+    font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
+    font-weight: lighter;
+    font-size: 600%;
+}
+
+.weather-result {
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.results-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
+    width: 60%;
+    background-color: #28293d;
+    border-radius: 13px;
+    margin: 1rem auto;
+}
+
+.weather-label-icon {
+    font-size: 3rem;
+}
+
+.developers-note {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* SELECTORS FOR MULTIPLE ELEMENTS */
+
+.block-element {
+    display: inline-block;
+}
+
+.num-type{
+    font-family: 'Neue Haas Grotesk Text Pro', sans-serif;
+}
+
+.text-info {
+    color: #74d9ff;
+}
+
+a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .main-container {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1500px) {
+
+    .date-city-container > div {
+        font-size: .8rem;
+    }
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1400px){
+
+    .main-container {
+        width: 60%;
+    }
+
+}
