@@ -4,7 +4,7 @@
 A weather web app that fetches the latest weather report of your city. Each weather report comes with an artwork showcasing the current weather description.
 Made responsive with only pure CSS.
 
-See the live demo of the app [here](https://weather-with-api.herokuapp.com/).
+See the live demo of the app [here](https://weather-labs.herokuapp.com/).
 
 ## Set App Locally
 
