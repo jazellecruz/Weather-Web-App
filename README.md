@@ -1,5 +1,5 @@
 
-# Weather Web App
+# WeatherLabs
 
 A weather web app that fetches the latest weather report of your city. Each weather report comes with an artwork showcasing the current weather description.
 Made responsive with only pure CSS.
