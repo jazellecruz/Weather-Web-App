@@ -48,7 +48,7 @@ Open the web app
 
 
 ## Appendix
-The credits for the artworks used for the web app goes to the respective owners. Their profiles and artworks can be accessed through the links in the real-time version of the web app.
+The credits for the artworks used for the web app goes to the respective owners. Their profiles and artworks can be accessed through the links in the real-time version of the web app. This project was made by a beginner. Expect some flaws and errors. Project is open for any improvements.
 
 
 
