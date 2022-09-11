@@ -12,7 +12,7 @@ See the live demo of the app [here](https://weather-labs.herokuapp.com/).
 Clone the project
 
 ```bash
-  git clone https://github.com/jazellecruz/Weather-Web-App
+  git clone https://github.com/<your username>/Weather-Web-App
 ```
 
 Go to the project directory
