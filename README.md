@@ -1,8 +1,10 @@
 
-# Weather Web App
+# WeatherLabs
 
 A weather web app that fetches the latest weather report of your city. Each weather report comes with an artwork showcasing the current weather description.
-Made responsive only with pure CSS.
+Made responsive with only pure CSS.
+
+See the live demo of the app [here](https://weather-labs.herokuapp.com/).
 
 ## Set App Locally
 
@@ -10,7 +12,7 @@ Made responsive only with pure CSS.
 Clone the project
 
 ```bash
-  git clone https://github.com/jazellecruz/Weather-Web-App
+  git clone https://github.com/jazellecruz/Weather-Web-App.git
 ```
 
 Go to the project directory
@@ -46,7 +48,7 @@ Open the web app
 
 
 ## Appendix
-The credits for the artworks used for the web app goes to the respective owners. Their profiles and artworks can be accessed through the links in the real-time version of the web app.
+The credits for the artworks used for the web app goes to the respective owners. Their profiles and artworks can be accessed through the links in the real-time version of the web app. This project was made by a beginner. Expect some flaws and errors. Project is open for any improvements.
 
 
 
