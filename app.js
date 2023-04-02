@@ -1,12 +1,8 @@
-// jshint esversion6
-
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
-const https = require("https");
-const string = require("lodash/string");
-const { getImgSrc } = require("./public/js/getImage");
-const currentDate = require("./public/js/date");
+const axios = require("axios");
+const _ = require("lodash");
 const port = process.env.PORT || 3000;
 
 const app = express();
@@ -27,54 +23,57 @@ app.get("/", (req, res) => {
 });
 
 app.get("/results", (req, res) => {
-
-    if (res.statusCode !== "404") {
-        res.render("result", {
-            weatherDetails: weatherInfo,
-            currentDate: currentDate
-        });
-    } else {
-        res.status(404).render("error");
-    }
-    
+    res.render("result", {weatherDetails: weatherInfo});
 });
 
-app.get("/developers-note", (req, res) => {
-    res.render("note");
-});
 
-app.post("/", (req, res) => {
+app.post("/", async(req, res, next) => {
     const city = req.body.cityInput;
-    const url = process.env.API_URL + 'q=' + city + '&appid=' + process.env.API_KEY + "&units=metric";
+    const url = process.env.API_URL + 'q=' + city + "&units=metric"  + '&appid=' + process.env.API_KEY;
 
-    https.get(url, (response) => {
-        response.on("data", (data, err) => {
-            const weatherData = JSON.parse(data);
-            const results = {
-                weather: string.startCase(weatherData.weather[0].description),
-                weatherIcon: "http://openweathermap.org/img/wn/" + weatherData.weather[0].icon + "@2x.png",
-                /* getImgSrc() will take the weather's main parameter and return its corresponding weather image.
-                 See https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2 for weather conditions guide. */
-                weatherImgSrc: getImgSrc(weatherData.weather[0].main),
-                temp: Math.round(weatherData.main.temp),
-                feelsLike: weatherData.main.feels_like,
-                minTemp: Math.round(weatherData.main.temp_min),
-                maxTemp: Math.round(weatherData.main.temp_max),
-                humidity: weatherData.main.humidity,
-                visibility: weatherData.visibility,
-                windSpeed: weatherData.wind.speed,
-                windDeg: weatherData.wind.deg,
-                country: weatherData.sys.country,
-                city: weatherData.name
+    try {
+        let results = await axios.get(url)
+
+        weatherInfo = {
+            location: {
+                coord: {
+                    lon: results.data.coord.lon,
+                    lat: results.data.coord.lat
+                },
+                country: results.data.sys.country,
+                city: results.data.name
+            },
+            weather: {
+                main: results.data.weather[0].main,
+                desc: _.startCase(results.data.weather[0].description),
+                icon: `http://openweathermap.org/img/wn/${results.data.weather[0].icon}@2x.png`,
+            },
+            main: {
+                temp: _.round(results.data.main.temp),
+                humidity: `${results.data.main.humidity}%`,
+                wind: {
+                    speed: results.data.wind.speed,
+                }
             }
-            weatherInfo = results;
-            res.redirect("/results");
-        });
+        }
 
-    });
+        res.redirect("/results");
+    } catch(err) {
+        next(err);
+    }
 
+});
+
+app.use((err, req, res, next) => {
+    console.log(err)
+    if (err.response.status) {
+        res.render("error", {error: err.response.status});
+    } else {
+        res.render("error");
+    }
+   
 });
 
 app.listen(port, () => {
-    console.log("SERVER IS RUNNING ON PORT 3000.");
+    console.log("Howdy from port 3000! 🤠");
 });
