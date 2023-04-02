@@ -3,112 +3,46 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-    <title>Weather Web App</title>
-    <link rel="icon" type="image/x-icon" href="images/sun.ico">
+    <title>WeatherLabs</title>
+    <link rel="icon" type="image/x-icon" href="images/weatherLabs32x32.png">
     <link rel="stylesheet" href="css/results.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="content-wrapper">
-            <div class="main-container">
-                <div class="image-container">
-                    <img src=<%= weatherDetails.weatherImgSrc.imgSrc %> class="weather-img" alt=<%= weatherDetails.src %>>
-                    <div class="art-info-container">
-                        <div class="block-element">
-                            <p class="art-name">
-                                <a href="<%= weatherDetails.weatherImgSrc.imgLink %>">
-                                    <%= weatherDetails.weatherImgSrc.artName %>
-                                </a>
-                            </p>
-                            <p class="artist-name">by <a
-                                    href=<%= weatherDetails.weatherImgSrc.artistLink %>><%= weatherDetails.weatherImgSrc.artist %></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <div class="date-city-container ">
-                        <div>
-                            <p class="location-icon block-element"><i class="fa-solid fa-location-dot"></i></p>
-                            <h1 class="block-element"><%= weatherDetails.city %></h1>
-                        </div>
-                        <div>
-                            <h1><%= currentDate %></h1>
-                        </div>
-                    </div>
-                    <div class="results-container">
-                        <h1 class="temp"><%= weatherDetails.temp %>°</h1>
-                        <p class="block-element">H: <span class="num-type"><%= weatherDetails.maxTemp %>°</span></p>
-                        <p class="block-element">L: <span class="num-type"><%= weatherDetails.minTemp %>°</span></p>
-                    </div>
-                    <div class="results-container">
-                        <div>
-                            <h1 class="text-info weather-label-icon"><i class="fa-solid fa-temperature-half"></i></h1>
-                        </div>
-                        <div>
-                            <p>Feels Like:</p>
-                            <p class="text-info weather-result"><span class="num-type"><%= weatherDetails.feelsLike %>°</span></p>
-                        </div>
-                    </div>
-                    <div class="results-container">
-                        <div class="">
-                            <p>Weather:</p>
-                            <p class="text-info weather-result"><%= weatherDetails.weather %></p>
-                        </div>
-                        <div>
-                            <img src="<%=weatherDetails.weatherIcon %>" alt="">
-                        </div>
-                    </div>
-                    <div class="results-container">
-                        <div>
-                            <h1 class="text-info weather-label-icon"><i class="fa-regular fa-eye"></i></h1>
-                        </div>
-                        <div>
-                            <p>Visibility:</p>
-                            <p class="text-info weather-result">
-                                <span class="num-type"><%= weatherDetails.visibility %>%</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="results-container">
-                        <div>
-                            <h1 class="text-info weather-label-icon"><i class="fa-solid fa-droplet"></i></h1>
-                        </div>
-                        <div>
-                            <p>Humidity:</p>
-                            <p class="text-info weather-result">
-                                <span class="num-type"><%= weatherDetails.humidity %>%</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="results-container">
-                        <div>
-                            <h1 class="text-info weather-label-icon"><i class="fa-solid fa-wind"></i></h1>
-                        </div>
-                        <div>
-                            <p>Wind Speed:</p>
-                            <p class="text-info weather-result">
-                                <span class="num-type"><%= weatherDetails.windSpeed %> m/s</span>
-                            </p>
-                            <p>Wind Degrees:</p>
-                            <p class="text-info weather-result">
-                                <span class="num-type"><%= weatherDetails.windDeg %>°</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <p class="developers-note"><a class="text-info" href="/developers-note">Developer's Note</a></p>
+    <div class="results-container">
+        <div class="section header">
+            <div class="location-container">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <p class="bold-text"><%= weatherDetails.location.city %>, <%= weatherDetails.location.country %></p>
             </div>
-            <footer>
-                <p>Jazelle Cruz &#169; <span id="copyright-year"></span></p>
-            </footer>
+        </div>
+        <div class="section main">
+            <img src="<%=weatherDetails.weather.icon %>" alt="weather-img">
+            <p class="bold-text num-type"><%=weatherDetails.main.temp %>°</p>
+            <p><%=weatherDetails.weather.desc %></p>
+        </div>
+        <div class="section footer">
+            <div class="sub-section">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <p class="bold-text"><%=weatherDetails.main.humidity %></p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="sub-section">
+                <i class="fa-solid fa-wind"></i>
+                <div>
+                    <p class="bold-text"><%=weatherDetails.main.wind.speed %> m/s</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
         </div>
     </div>
+    <%- include("./partials/footer") %>
     <script src="https://kit.fontawesome.com/c0fe12e66f.js" crossorigin="anonymous"></script>
-    <script src="js/copyright.js"></script>
-    </body>
+</body>
 
 </html>
+
 

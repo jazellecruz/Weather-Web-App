@@ -3,37 +3,28 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weather Web App</title>
-    <link rel="icon" type="image/x-icon" href="images/sun.ico">
+    <title>WeatherLabs</title>
+    <link rel="icon" type="image/x-icon" href="images/weatherLabs32x32.png">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="content-wrapper">
-            <div class="main-container">
-                <div class="brand-container">
-                    <h1>Get the latest Weather Report of your City</h1>
-                </div>
-                <div class="form-container">
-                    <form action="/" method="post">
-                        <div class="input-container">
-                            <input type="text" name="cityInput" placeholder="Enter City" autocomplete="off" autofocus="on">
-                        </div>
-                        <div class="button-container">
-                            <button type="submit">
-                                <span class="find-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <footer>
-                    <p>Jazelle Cruz &#169; <span id="copyright-year"></span></p>
-                </footer>
-            </div>
+    <div class="main-container form">
+        <div class="brand-container">
+            <img src="/images/weatherLabs.png"/>
+            <p class="brand-name"><span>Weather</span>Labs</p>
+            <p class="intro">Get the latest weather report of your city.</p>
         </div>
+
+        <form method="post" action="/">
+            <input type="text" name="cityInput" placeholder="Enter your city" autocomplete="off" >
+            <button type="submit">
+                <span class="find-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+        </form>
     </div>
+    <%- include("./partials/footer") %>
     <script src="https://kit.fontawesome.com/c0fe12e66f.js" crossorigin="anonymous"></script>
 </body>   
 
