@@ -1,57 +1,75 @@
 
-.main-container {
-    width: 30%;
-    background-color: #1c1c27;
-    border-radius: 20px;
-    margin: 5rem auto;
-    text-align: center;
-    padding: 3rem 0 3rem 0;
-    color: #fff;
+.brand-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
-h1 {
-    letter-spacing: 1px;
+.main-container.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 32px;
+    box-sizing: border-box;
+    max-width: 100%;
+    border-radius: 12px;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+img{
+    width: 7rem;
+}
+
+.brand-name{
+    font-size: 38px;
+}
+
+.brand-container p:last-of-type{
+    font-size: 18px;
 }
 
 input {
-    width: 15rem;
+    width: 13rem;
     height: 3rem;
-    border-radius: 15px;
+    box-sizing: border-box;
     border: none;
+    border-bottom: 1px solid #b1b1b1;
+    outline: 0;
     font-size: 1.2rem;
-    text-align: center;
+    background-color: transparent;
+    padding: 8px;
+    color: inherit;
+    text-align: inherit;
 }
 
-.brand-container {
-    padding: 0 5rem;
-    margin-bottom: 2.5rem;
-    line-height: 3rem;
+p span{
+    color:#dbad42
+}
+
+form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
-    margin-top: 30px;
-    width: 7rem;
-    height: 3rem;
-    background-color: #86a5ff;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #dbad42;
     font-size: 1rem;
-    border-radius: 15px;
+    border-radius: 100%;
     border: none;
 }
 
-@media only screen and (max-width: 800px) {
-    .main-container {
-        width: 80%
+@media only screen and (max-height: 685px) {
+    .main-container.form{
+        padding-top: 10vh;
     }
-}
-
-@media only screen and (max-width: 1300px) and (min-width: 800px) {
-    .main-container {
-        width: 60%
-    }
-}
-
-@media only screen and (max-width: 1680px) and (min-width: 1300px) {
-    .main-container {
-        width: 40%;
-    }
+    
 }

@@ -1,7 +1,5 @@
-@import url('//fonts.cdnfonts.com/css/gilroy-bold');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 @import url('//fonts.cdnfonts.com/css/neue-haas-grotesk-text-pro');
-@import url('//fonts.cdnfonts.com/css/claris-sans');
-
 
 * {
     margin: 0;
@@ -9,25 +7,27 @@
 }
 
 body {
-    background-color: #353c51;
-    font-family: 'Gilroy-Regular', sans-serif;
+    background-color: #182338;
+    font-family: 'Manrope', sans-serif;
+    color: #f5f9fd;
+    height: 100%;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 2.5rem;
-    color: #f5f9fd;
     text-align: center;
+    padding: 20px;
 }
 
-.page-container {
-    position: relative;
-    min-height: 100vh
+footer p{
+    font-size: 15px;
+    margin-top: 8px;
 }
 
-.content-wrapper {
-    padding-bottom: 2.5rem;
+footer a {
+    text-decoration: none;
+    color:#dbad42;
+}
+
+.bold-text{
+    font-weight: bolder;
 }
